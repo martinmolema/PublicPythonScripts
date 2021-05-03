@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-# Example usage: draw-io-export.py --scale=2 --format=PNG --output-directory=afbeeldingen -t Diagrams.drawio
+# Example usage: draw-io-export.py --scale=2 --format=PNG --output-directory=images -t Diagrams.drawio
 import collections
 import os
 import xml.etree.ElementTree as ET
