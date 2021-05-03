@@ -13,12 +13,12 @@ long_options = ["help", "basename =", "scale=","format=", "output-directory=", "
 def Usage():
     print("Usage:")
     print("draw-io-export [-b basename | --basename basename] [-h|--help] [-f format | --format] [-s scale | --scale scale] [-t | --transparent] filename")
-    print ("-h | --help\n display this help ")
-    print ("-b | --basename\n the base of the filename to which the pagename is added")
-    print ("-s | --scale\n scale the image; value must be an number; 1=100%, 2=200% etc.")
-    print ("-f | --format supported export types by drawIO. e.g. PNG or JPG")
-    print ("-d | --output-directory the directory where exported files are placed")
-    print ("-t | --transparent the directory where exported files are placed")
+    print ("-h | --help              \n        display this help ")
+    print ("-b | --basename          \n        the base of the filename to which the pagename is added")
+    print ("-s | --scale             \n        scale the image; value must be an number; 1=100%, 2=200% etc.")
+    print ("-f | --format            \n        supported export types by drawIO. e.g. PNG or JPG")
+    print ("-d | --output-directory  \n        the directory where exported files are placed")
+    print ("-t | --transparent       \n        background of the exported image is made transparent")
 
 # Remove 1st argument from the
 # list of command line arguments
