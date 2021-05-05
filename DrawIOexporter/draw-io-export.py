@@ -122,6 +122,7 @@ print(("Using output base filename %s") % (basename))
 print(("Sending result files to directory %s") % (directory))
 
 root = ET.parse(inputFullPath).getroot()
+pageNumber = 0
 for diagram in root.findall('diagram'):
 
     # get the name-attribute of the diagram element
@@ -132,7 +133,7 @@ for diagram in root.findall('diagram'):
     newfilename = directory + "/" + basename + ' - ' + pagename + '.png'
 
     # construct a command line. assume that drawio can be run using the path-variable
-    commandline = "drawio -x -o '" + newfilename + "' -f " + format + " -s " + scale
+    commandline = "drawio -x -p "  + str(pageNumber) + " -o '" + newfilename + "' -f " + format + " -s " + scale
     if transparent:
         commandline += " -t"
 
@@ -143,3 +144,5 @@ for diagram in root.findall('diagram'):
     result = os.system(commandline)
     if result != 0:
         print("#Error running command line")
+    pageNumber += 1
+
